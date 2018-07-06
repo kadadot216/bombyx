@@ -10,5 +10,21 @@
 
 #include "stypes.h"
 
+struct	plot_table_s {
+	pflags_t	type;
+	union	v1_u {
+		uint_t	idx;
+		double	grate;
+	} v1;
+	double	v2;
+};
+
+struct	pop_info_s {
+	void	(*compute)(struct plot_table_s *, struct pop_info_s *);
+	double	grate;
+	uint_t	init_pop;
+	uint_t	gen_x;
+	uint_t	gen_y;
+};
 
 #endif

@@ -11,5 +11,6 @@
 #include "types.h"
 
 int	my_exit_usage(char *pname, pflags_t pflag);
+void	display_plot_table(plot_table_t *plot_table);
 
 #endif

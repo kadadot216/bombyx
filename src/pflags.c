@@ -17,7 +17,7 @@ static void	check_for_helpflag(pflags_t *pflag, char *curr_arg)
 
 static void	arg_is_number(pflags_t *pflag, char *curr_arg)
 {
-	if (!my_str_isnum(curr_arg)) {
+	if (!my_str_isnum(curr_arg) && curr_arg[0] != '-') {
 		*pflag = ERROR;
 	}
 }
@@ -47,8 +47,8 @@ pflags_t	build_pflagsmask(int ac, char **av)
 	if (ac == 0) {
 		return (WARNING);
 	}
-	check_ac_and_set(&pflag, &ac, 3, GRATE_PARSING);
-	check_ac_and_set(&pflag, &ac, 4, INTERVAL_PARSING);
+	check_ac_and_set(&pflag, &ac, 2, GRATE_PARSING);
+	check_ac_and_set(&pflag, &ac, 3, INTERVAL_PARSING);
 	check_for_valid_args(&pflag, &ac, av);
 	if (pflag == 0) {
 		return (ERROR);

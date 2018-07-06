@@ -23,6 +23,7 @@ LIB_HDS		=	$(addprefix $(LIB_HDPATH)/, $(LIB_HDSRC))
 LIB_SRCS	=	my_putstr.c		\
 			my_puterror.c		\
 			my_str_isnum.c		\
+			my_getnbr.c		\
 			my_strcmp.c
 
 LIB_SRC		=	$(addprefix $(LIB_PATH)/, $(LIB_SRCS))
@@ -34,8 +35,11 @@ HDPATH		=	./include
 CFLAGS		+=	-I$(HDPATH)
 NAME		=	106bombyx
 LDFLAGS		=	-L./lib
-LIBFLAG		=	-lmy
+LIBFLAG		=	-lmy -lm
 SRC		=	src/pflags.c		\
+			src/build_pop.c		\
+			src/build_pop_helpers.c	\
+			src/calc.c		\
 			src/print.c
 
 MAIN		=	src/main.c

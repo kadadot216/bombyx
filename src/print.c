@@ -5,6 +5,7 @@
 ** printing related functions
 */
 
+#include <stdio.h>
 #include "my.h"
 #include "defs.h"
 #include "types.h"
@@ -32,5 +33,15 @@ int	my_exit_usage(char *pname, pflags_t pflag)
 		return (MY_EXIT_SUCCESS);
 	} else {
 		return (MY_EXIT_FAILURE);
+	}
+}
+
+void	display_plot_table(plot_table_t *plot_table)
+{
+	uint_t	i = 0;
+
+	while (i < 100) {
+		printf("%u %.2f\n", (i + 1), plot_table[i]);
+		i++;
 	}
 }
