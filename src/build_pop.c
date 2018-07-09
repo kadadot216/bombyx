@@ -14,13 +14,14 @@ void	get_compute_function(compute_t *popfun, pflags_t *pflag)
 	if (*pflag == INTERVAL_PARSING) {
 		*popfun = &compute_from_interval;
 	} else if  (*pflag == GRATE_PARSING) {
-		*popfun = &compute_from_interval;
+		*popfun = &compute_from_grate;
 	}
 }
 
 int	fill_pop_info(pop_info_t *pop, pflags_t *pflag, char **av)
 {
-	get_compute_function(&pop->compute, pflag);
+	pop->ctype = *pflag;
+	get_compute_function(&pop->compute, &pop->ctype);
 	fill_init_pop(&pop->init_pop, av[1]);
 	fill_interval_pop(&pop->gen_x, av[2], pflag);
 	fill_interval_pop(&pop->gen_y, av[3], pflag);

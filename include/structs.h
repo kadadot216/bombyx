@@ -13,13 +13,14 @@
 struct	plot_table_s {
 	pflags_t	type;
 	union	v1_u {
-		uint_t	idx;
-		double	grate;
+		uint_t	*idx;
+		double	*grate;
 	} v1;
-	double	v2;
+	double	*v2;
 };
 
 struct	pop_info_s {
+	pflags_t	ctype;
 	void	(*compute)(struct plot_table_s *, struct pop_info_s *);
 	double	grate;
 	uint_t	init_pop;

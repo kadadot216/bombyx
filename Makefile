@@ -40,6 +40,7 @@ SRC		=	src/pflags.c		\
 			src/build_pop.c		\
 			src/build_pop_helpers.c	\
 			src/calc.c		\
+			src/destroy.c		\
 			src/print.c
 
 MAIN		=	src/main.c

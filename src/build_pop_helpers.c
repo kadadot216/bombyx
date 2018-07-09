@@ -24,7 +24,7 @@ void	fill_interval_pop(uint_t *gen_pop, char *arg, pflags_t *pflag)
 void	fill_grate(double *grate, char *arg, pflags_t *pflag)
 {
 	if (*pflag == GRATE_PARSING) {
-		*grate = atol(arg);
+		*grate = atof(arg);
 	}
 }
 

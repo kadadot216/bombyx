@@ -27,8 +27,10 @@ int	main(int ac, char **av)
 		empty_pop_info(&pop_info);
 		return (my_exit_usage(av[0], pflag));
 	}
+	plot_table = init_plot_table(plot_table, &pop_info);
 	pop_info.compute(plot_table, &pop_info);
 	display_plot_table(plot_table);
 	empty_pop_info(&pop_info);
+	plot_table = destruct_plot_table(plot_table);
 	return (MY_EXIT_SUCCESS);
 }
