@@ -21,7 +21,7 @@ struct	plot_table_s {
 
 struct	pop_info_s {
 	pflags_t	ctype;
-	void	(*compute)(struct plot_table_s *, struct pop_info_s *);
+	struct plot_table_s	*(*compute)(struct plot_table_s *, struct pop_info_s *);
 	double	grate;
 	uint_t	init_pop;
 	uint_t	gen_x;

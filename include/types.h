@@ -12,6 +12,6 @@
 
 typedef struct pop_info_s	pop_info_t;
 typedef struct plot_table_s	plot_table_t;
-typedef	void	(*compute_t)(plot_table_t *, pop_info_t *);
+typedef	plot_table_t	*(*compute_t)(plot_table_t *, pop_info_t *);
 
 #endif
