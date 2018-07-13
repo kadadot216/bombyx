@@ -30,7 +30,7 @@ void	fill_grate(double *grate, char *arg, pflags_t *pflag)
 
 int	grate_within_bounds(double *grate, pflags_t *pflag)
 {
-	if (!(*grate) || *pflag == INTERVAL_PARSING) {
+	if (*pflag == INTERVAL_PARSING) {
 		return (1);
 	} else if (*grate < MIN_GRATE || *grate > MAX_GRATE) {
 		*pflag = ERROR;

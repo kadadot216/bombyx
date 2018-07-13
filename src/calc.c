@@ -14,7 +14,7 @@ plot_table_t	*init_plot_table(plot_table_t *plot_table, pop_info_t *pop)
 	plot_table = malloc(sizeof(plot_table_t));
 	plot_table->type = pop->ctype;
 	if (plot_table->type == INTERVAL_PARSING) {
-		plot_table->v1.grate = malloc(sizeof(double) * 100);
+		plot_table->v1.grate = malloc(sizeof(double) * 10000);
 	} else if  (plot_table->type == GRATE_PARSING) {
 		plot_table->v1.idx = malloc(sizeof(uint_t) * 100);
 	}
