@@ -17,7 +17,7 @@ static void	check_for_helpflag(pflags_t *pflag, char *curr_arg)
 
 static void	arg_is_number(pflags_t *pflag, char *curr_arg)
 {
-	if (!my_str_isnum(curr_arg) && curr_arg[0] != '-') {
+	if (!my_str_isnum(curr_arg) || curr_arg[0] == '-') {
 		*pflag = ERROR;
 	}
 }

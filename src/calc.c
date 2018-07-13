@@ -55,5 +55,6 @@ void	compute_from_interval(plot_table_t *plot_table, pop_info_t *pop)
 
 		}
 		k += 0.01;
+		i = 1;
 	}
 }
