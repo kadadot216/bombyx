@@ -12,9 +12,5 @@
 
 int	fill_pop_info(pop_info_t *pop, pflags_t *pflag, char **av);
 void	empty_pop_info(pop_info_t *pop);
-void	compute_plot_table(double *plot_table, pop_info_t *pop);
-plot_table_t	*init_plot_table(plot_table_t *plot_table, pop_info_t *pop);
-plot_table_t	*destruct_plot_table(plot_table_t *plot_table,
-	pop_info_t *pop);
 
 #endif

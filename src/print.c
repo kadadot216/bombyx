@@ -32,22 +32,3 @@ int	my_exit_usage(char *pname, pflags_t pflag)
 		return (MY_EXIT_FAILURE);
 	}
 }
-
-void	display_plot_table(plot_table_t *plot_table, pop_info_t *pop)
-{
-	uint_t	i = 0;
-	uint_t	max = 0;
-
-	if (plot_table->type == GRATE_PARSING) {
-		while (i < 100) {
-			printf("%u %.2f\n", plot_table->v1.idx[i], plot_table->v2[i]);
-			i++;
-		}
-	} else if (plot_table->type == INTERVAL_PARSING) {
-		max = ((pop->gen_y - pop->gen_x) * 300);
-		while (i < max) {
-			printf("%.2f %.2f\n", plot_table->v1.grate[i], plot_table->v2[i]);
-			i++;
-		}
-	}
-}

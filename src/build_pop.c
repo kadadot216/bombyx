@@ -5,23 +5,26 @@
 ** Build population struct from args
 */
 
+#include <stdlib.h>
 #include "types.h"
 #include "build_pop_helpers.h"
 #include "calc.h"
 
-void	get_compute_function(compute_t *popfun, pflags_t *pflag)
+compute_t	set_compute_fct(pflags_t *pflag)
 {
 	if (*pflag == INTERVAL_PARSING) {
-		*popfun = &compute_from_interval;
-	} else if  (*pflag == GRATE_PARSING) {
-		*popfun = &compute_from_grate;
+		return (&compute_from_interval);
+	} else if (*pflag == GRATE_PARSING) {
+		return (&compute_from_grate);
+	} else {
+		return (NULL);
 	}
 }
 
 int	fill_pop_info(pop_info_t *pop, pflags_t *pflag, char **av)
 {
 	pop->ctype = *pflag;
-	get_compute_function(&pop->compute, &pop->ctype);
+	pop->compute = set_compute_fct(&pop->ctype);
 	fill_init_pop(&pop->init_pop, av[1]);
 	fill_interval_pop(&pop->gen_x, av[2], pflag);
 	fill_interval_pop(&pop->gen_y, av[3], pflag);

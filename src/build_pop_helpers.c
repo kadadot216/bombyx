@@ -16,7 +16,7 @@ void	fill_init_pop(uint_t *init_pop, char *arg)
 
 void	fill_interval_pop(uint_t *gen_pop, char *arg, pflags_t *pflag)
 {
-	if (*pflag == INTERVAL_PARSING)	 {
+	if (*pflag == INTERVAL_PARSING) {
 		*gen_pop = ((uint_t) atoi(arg));
 	}
 }
