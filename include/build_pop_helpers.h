@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** build_pop_helpers.h
-** File description:
-** Header file for build_pop_helpers.c
-*/
-
 #ifndef __BUILD_POP_HELPERS_H__
 #define __BUILD_POP_HELPERS_H__
 

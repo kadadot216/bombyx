@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** print.h
-** File description:
-** Header file for print.c
-*/
-
 #ifndef __PRINT_H__
 #define __PRINT_H__
 

@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** calc.h
-** File description:
-** Header file for calc.c
-*/
-
 #ifndef __CALC_H__
 #define __CALC_H__
 

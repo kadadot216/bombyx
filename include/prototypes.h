@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** prototypes.h
-** File description:
-** Header file for function prototypes
-*/
-
 #ifndef __PROTOTYPES_H__
 #define __PROTOTYPES_H__
 

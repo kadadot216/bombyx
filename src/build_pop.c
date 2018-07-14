@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** build_pop.c
-** File description:
-** Build population struct from args
-*/
-
 #include <stdlib.h>
 #include "types.h"
 #include "build_pop_helpers.h"

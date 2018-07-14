@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** main.c
-** File description:
-** Main file for 106bombyx
-*/
-
 #include "my.h"
 #include "print.h"
 #include "defs.h"

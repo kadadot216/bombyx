@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** build_pop_helpers.c
-** File description:
-** pop_info_building helpers functions
-*/
-
 #include <stdlib.h>
 #include "types.h"
 #include "defs.h"

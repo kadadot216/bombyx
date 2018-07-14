@@ -1,10 +1,3 @@
-##
-## EPITECH PROJECT, 2018
-## Makefile
-## File description:
-## Makefile for my_runner
-##
-
 CC		=	gcc -W -Wall -Wextra
 DBCC		=	gcc -g
 RM		=	rm -f
@@ -33,7 +26,7 @@ LIB_NAME	=	lib$(LIB_NAMEDIR).a
 #	Program settings
 HDPATH		=	./include
 CFLAGS		+=	-I$(HDPATH)
-NAME		=	106bombyx
+NAME		=	bombyx
 LDFLAGS		=	-L./lib
 LIBFLAG		=	-lmy -lm
 SRC		=	src/pflags.c		\
@@ -88,7 +81,7 @@ re: clean fclean $(NAME)
 clean:
 	$(RM) $(OBJ)
 
-fclean:	clean
+fclean:	libfclean clean
 	$(RM) $(HDTGR)
 	$(RM) $(LIBTGR)
 	$(RM) $(NAME)

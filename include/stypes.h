@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** stypes.h
-** File description:
-** Header file for simple types definitions
-*/
-
 #ifndef __STYPES_H__
 #define __STYPES_H__
 

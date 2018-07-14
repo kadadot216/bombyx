@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** defs.h
-** File description:
-** Header file for program's definitions
-*/
-
 #ifndef __DEFS_H__
 #define __DEFS_H__
 

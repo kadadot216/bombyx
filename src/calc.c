@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** calc.c
-** File description:
-** Calculations related functions
-*/
-
 #include <stdio.h>
 #include "types.h"
 
